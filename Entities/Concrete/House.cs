@@ -9,9 +9,9 @@ namespace Entities.Concreate
     {
         public int Id { get; set; }
         public int CategoryId { get; set; }
-        public string Address { get; set; }
-        public string City { get; set; }
-        public int size { get; set; }
+        public int CityId { get; set; }
+        public string Address { get; set; } 
+        public int Size { get; set; }
         public int FloorLocation { get; set; }
         public decimal DailyPrice { get; set; }
         public DateTime Date { get; set; }

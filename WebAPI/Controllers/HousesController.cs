@@ -39,6 +39,83 @@ namespace WebAPI.Controllers
                 return Ok(result);
             }
             return BadRequest(result);
+        }      
+
+        [HttpGet("getbycategoryid")]
+        public IActionResult GetByCategoryId(int categoryId)
+        {
+            var result = _houseService.GetByCategoryId(categoryId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("getbycityid")]
+        public IActionResult GetByCityId(int cityId)
+        {
+            var result = _houseService.GetByCityId(cityId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("gethousedetails")]
+        public IActionResult GetCarDetails()
+        {
+            var result = _houseService.GetHouseDetails();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("gethousedetailsbyhouseid")]
+        public IActionResult GetHouseDetailsByHouseId(int houseId)
+        {
+            var result = _houseService.GetHouseDetailsByHouseId(houseId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("gethousedetailsbyfilter")]
+        public IActionResult GetHouseDetailsByFilter(int categoryId, int cityId)
+        {
+            var result = _houseService.GetHouseDetailsByFilter(categoryId, cityId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("gethousebycategorydetaildtos")]
+        public IActionResult GetHouseByCategoryIdDetailDtos(int categoryId)
+        {
+            var result = _houseService.GetHouseByCategoryIdDetailDtos(categoryId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("gethousebycityiddetaildtos")]
+        public IActionResult GetCarByColorIdDetailDtos(int cityId)
+        {
+            var result = _houseService.GetHouseByCityIdDetailDtos(cityId);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
         }
 
         [HttpPost("add")]
@@ -74,5 +151,6 @@ namespace WebAPI.Controllers
             }
             return BadRequest(result);
         }
+
     }
 }

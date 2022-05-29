@@ -30,7 +30,7 @@ namespace Business.Constans
         public static string UserUpdated = "Kullanıcılar güncellendi";
 
         //Auth
-        public static string AccessTokenCreated = "Token oluşturuldu";
+        public static string AccessTokenCreated = "Giriş Yapıldı";
         public static string UserNotFound = "Kullanıcı bulunamadı";
         public static string PasswordError = "Parola hatası";
         public static string SuccessfulLogin = "Başarılı giriş";
@@ -42,5 +42,16 @@ namespace Business.Constans
         public static string HouseImageLimitExceeded = "Bir konut için maksimum  5 resim eklenebilir";
         public static string HouseImageDeleted = "Konut resmi silindi";
         public static string HouseImageUpdated = "konut resmi güncellendi";
+
+        //City
+        public static string CityAdded = "Şehir eklendi";
+        public static string CityDeleted = "Şehir silindi";
+        public static string CityListed = "Şehirler listelendi";
+        public static string CityUpdated = "Şehir bilgisi güncellendi";
+
+
+        public static string HouseDetailListed = "Ev detayları listelendi";
+        public static string ReservationBetweenSelectedDatesExist ="Secilen tarihler arasinda zaten bir rezervasyon mevcut";
+        public static string HouseCanBeRentedBetweenSelectedDates = "Ev, secilen tarihler arasinda kiralanabilir";
     }
 }

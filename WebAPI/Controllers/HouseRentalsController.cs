@@ -29,6 +29,17 @@ namespace WebAPI.Controllers
             return BadRequest(result);
         }
 
+        [HttpGet("getallbyid")]
+        public IActionResult GetAllById(int id)
+        {
+            var result = _houseRentalService.GetAllById(id);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
         [HttpGet("getbyid")]
         public IActionResult GetById(int id)
         {
@@ -66,6 +77,28 @@ namespace WebAPI.Controllers
         public IActionResult Delete(HouseRental houseRental)
         {
             var result = _houseRentalService.Delete(houseRental);
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("getrentaldetails")]
+        public IActionResult GetRentalDetails()
+        {
+            var result = _houseRentalService.GetRentalDetails();
+            if (result.Success)
+            {
+                return Ok(result);
+            }
+            return BadRequest(result);
+        }
+
+        [HttpGet("checkifcanhouseberentedbetweenselecteddates")]
+        public IActionResult CheckIfCanHouseBeRentedBetweenSelectedDates(int houseId, DateTime rentDate, DateTime returnDate)
+        {
+            var result = _houseRentalService.CheckIfCanHouseBeRentedBetweenSelectedDates(houseId, rentDate, returnDate);
             if (result.Success)
             {
                 return Ok(result);

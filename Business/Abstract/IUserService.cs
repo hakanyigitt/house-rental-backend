@@ -2,6 +2,7 @@
 using Core.Utilities.Results;
 using System;
 using System.Collections.Generic;
+using System.Security.Principal;
 using System.Text;
 
 namespace Business.Abstract
@@ -15,5 +16,6 @@ namespace Business.Abstract
         IResult Delete(User user);
         IDataResult<List<OperationClaim>> GetClaims(User user);
         IDataResult<User> GetByMail(string email);
+        IDataResult<User> GetCurrentUser(IIdentity getidentity);
     }
 }
